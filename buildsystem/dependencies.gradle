@@ -1,0 +1,64 @@
+ext {
+    // Sdk & buildTools Version Number
+    minSdkVersionNum = 21
+    compileSdkVersionNum = 28
+    targetSdkVersionNum = 28
+
+    // Version code and name
+    versionCode = 1
+    versionName = "0.0.1"
+
+    // Android Support
+    supportVersion = '1.0.0'
+
+    // AndroidTest Library
+    jUnitVersion = '4.12'
+    runnerVersion = '1.1.0'
+    rulesVersion = '1.1.0'
+    espressoCoreVersion = '3.1.0'
+    uiautomatorVersion = '2.2.0'
+
+    // Kotlin
+    kotlinVersion = '1.3.41'
+    coreKtxVersion = '1.0.0'
+
+    // Lint
+    lintVerion = "26.4.2"
+
+    // Dependencies for support library
+    supportDependencies = [
+            supportV4   : "androidx.legacy:legacy-support-v4:${supportVersion}",
+            supportV13  : "androidx.legacy:legacy-support-v13:${supportVersion}",
+            appCompatV7 : "androidx.appcompat:appcompat:${supportVersion}",
+            design      : "com.google.android.material:material:${supportVersion}",
+            recyclerview: "androidx.recyclerview:recyclerview:${supportVersion}",
+            cardview    : "androidx.cardview:cardview:${supportVersion}",
+    ]
+
+    // Dependencies for Android test library
+    androidTestDependencies = [
+            junit              : "junit:junit:${jUnitVersion}",
+            support_annotations: "androidx.annotation:annotation:${supportVersion}",
+            runner             : "androidx.test:runner:${runnerVersion}",
+            rules              : "androidx.test:rules:${rulesVersion}",
+            espresso_core      : "androidx.test.espresso:espresso-core:${espressoCoreVersion}",
+            espresso_web       : "androidx.test.espresso:espresso-web:${espressoCoreVersion}",
+            espresso_intents   : "androidx.test.espresso:espresso-intents:${espressoCoreVersion}",
+            uiautomator        : "androidx.test.uiautomator:uiautomator:${uiautomatorVersion}"
+    ]
+
+    // Dependencies for Kotlin
+    kotlinDependencies = [
+            coreKtx     : "androidx.core:core-ktx:${coreKtxVersion}",
+            stdlib : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlinVersion}"
+    ]
+
+    // Dependencies for Kotlin
+    lintDependencies = [
+            lintApi     : "com.android.tools.lint:lint-api:${lintVerion}",
+            lint        : "com.android.tools.lint:lint:${lintVerion}",
+            lintTest    : "com.android.tools.lint:lint-tests:${lintVerion}",
+            testUtils   : "com.android.tools:testutils:${lintVerion}"
+
+    ]
+}

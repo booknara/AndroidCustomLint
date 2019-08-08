@@ -1,4 +1,4 @@
-package com.rl.lintrules
+package com.booknara.lintrules
 
 import com.android.tools.lint.checks.infrastructure.LintDetectorTest.kotlin
 import com.android.tools.lint.checks.infrastructure.TestLintTask.lint

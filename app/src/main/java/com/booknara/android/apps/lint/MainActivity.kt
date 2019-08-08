@@ -1,4 +1,4 @@
-package com.rl.testlintapplication
+package com.booknara.android.apps.lint
 
 import android.os.Bundle
 

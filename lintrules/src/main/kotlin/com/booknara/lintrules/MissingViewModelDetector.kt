@@ -1,4 +1,4 @@
-package com.rl.lintrules
+package com.booknara.lintrules
 
 import com.android.tools.lint.detector.api.*
 import org.jetbrains.uast.UClass
@@ -40,7 +40,7 @@ class MissingViewModelDetector : Detector(), Detector.UastScanner {
                     context.report(
                         ISSUE_MISSING_VIEWMODEL_DETECTOR, declaration,
                         context.getNameLocation(declaration),
-                        MissingViewModelDetector.MESSAGE
+                        MESSAGE
                     )
                 }
             }

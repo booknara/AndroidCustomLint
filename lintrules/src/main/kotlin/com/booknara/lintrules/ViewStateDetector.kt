@@ -1,4 +1,4 @@
-package com.rl.lintrules
+package com.booknara.lintrules
 
 import com.android.tools.lint.detector.api.*
 import org.jetbrains.uast.UClass

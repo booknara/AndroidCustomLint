@@ -4,15 +4,18 @@ sourceCompatibility = "7"
 targetCompatibility = "7"
 
 dependencies {
-    compileOnly "com.android.tools.lint:lint-api:26.4.0"
-    compileOnly "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    testImplementation "com.android.tools.lint:lint:26.4.0"
-    testImplementation "com.android.tools.lint:lint-tests:26.4.0"
-    testImplementation "com.android.tools:testutils:26.4.0"
+    def kotlinDependencies = rootProject.ext.kotlinDependencies
+    compileOnly kotlinDependencies.stdlib
+
+    def lintDependencies = rootProject.ext.lintDependencies
+    compileOnly lintDependencies.lintApi
+    testImplementation lintDependencies.lint
+    testImplementation lintDependencies.lintTest
+    testImplementation lintDependencies.testUtils
 }
 
 jar {
     manifest {
-        attributes("Lint-Registry-v2": "com.rl.lintrules.MyIssueRegistry")
+        attributes("Lint-Registry-v2": "com.booknara.lintrules.MyIssueRegistry")
     }
 }
