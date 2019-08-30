@@ -1,4 +1,4 @@
-package com.booknara.lintrules
+package com.booknara.lintrules.detector
 
 import com.android.tools.lint.detector.api.*
 import org.jetbrains.uast.UClass
@@ -34,7 +34,11 @@ class UserInterfaceInheritanceDetector : Detector(), Detector.UastScanner {
     override fun visitClass(context: JavaContext, declaration: UClass) {
         super.visitClass(context, declaration)
 
-        if (context.evaluator.getQualifiedName(declaration) in UI_CLASSES) return
+        println("visit class name :  $declaration")
+        val qualifiedName = context.evaluator.getQualifiedName(declaration)
+        println("visit qualifiedName name :  $qualifiedName")
+
+        if (qualifiedName in UI_CLASSES) return
 
         declaration.superClass?.let { superClass ->
             if (context.evaluator.getQualifiedName(superClass) !in UI_CLASSES) {

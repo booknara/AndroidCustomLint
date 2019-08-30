@@ -1,4 +1,4 @@
-package com.booknara.lintrules
+package com.booknara.lintrules.detector
 
 import com.android.tools.lint.detector.api.*
 import org.jetbrains.uast.UClass
@@ -31,7 +31,8 @@ class ViewStateDetector : Detector(), Detector.UastScanner {
         private const val VIEWMODEL_CLASS = "androidx.lifecycle.ViewModel"
     }
 
-    override fun applicableSuperClasses(): List<String>? = UI_CLASSES
+    override fun applicableSuperClasses(): List<String>? =
+        UI_CLASSES
 
     override fun visitClass(context: JavaContext, declaration: UClass) {
         declaration.fields.forEach {
@@ -44,7 +45,8 @@ class ViewStateDetector : Detector(), Detector.UastScanner {
                 context.report(
                     ISSUE_VIEW_STATE, it,
                     context.getLocation(it),
-                    MESSAGE)
+                    MESSAGE
+                )
             }
         }
     }

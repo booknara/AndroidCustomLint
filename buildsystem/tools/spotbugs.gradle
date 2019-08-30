@@ -1,0 +1,14 @@
+apply plugin: "com.github.spotbugs"
+
+sourceSets {
+    main {
+        java.srcDirs = ['src/main/java']
+    }
+}
+
+spotbugs {
+    ignoreFailures = true
+    reportsDir = file("$project.buildDir/SpotBugsReports")
+    effort = "max"
+    reportLevel = "high"
+}

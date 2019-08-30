@@ -8,8 +8,23 @@ ext {
     versionCode = 1
     versionName = "0.0.1"
 
+    lintoptions = [
+            quiet             : false,
+            abortOnError      : true,
+            ignoreWarnings    : false,
+            checkAllWarnings  : true,
+            checkReleaseBuilds: false,
+            noLines           : false,
+            showAll           : true,
+            htmlReport        : true,
+            xmlReport         : false,
+    ]
+
     // Android Support
     supportVersion = '1.0.0'
+
+    // Android Jetpack
+    lifeCycle = '2.0.0'
 
     // AndroidTest Library
     jUnitVersion = '4.12'
@@ -19,11 +34,11 @@ ext {
     uiautomatorVersion = '2.2.0'
 
     // Kotlin
-    kotlinVersion = '1.3.41'
+    kotlinVersion = '1.3.50'
     coreKtxVersion = '1.0.0'
 
     // Lint
-    lintVerion = "26.4.2"
+    lintVerion = "26.5.0"
 
     // Dependencies for support library
     supportDependencies = [
@@ -33,6 +48,11 @@ ext {
             design      : "com.google.android.material:material:${supportVersion}",
             recyclerview: "androidx.recyclerview:recyclerview:${supportVersion}",
             cardview    : "androidx.cardview:cardview:${supportVersion}",
+    ]
+
+    // Dependencies for Android Jetpack library
+    androidxDependencies = [
+            lifecycle : "androidx.lifecycle:lifecycle-extensions:${lifeCycle}"
     ]
 
     // Dependencies for Android test library

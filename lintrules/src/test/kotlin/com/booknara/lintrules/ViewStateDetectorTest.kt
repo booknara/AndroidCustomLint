@@ -3,6 +3,7 @@ package com.booknara.lintrules
 import com.android.tools.lint.checks.infrastructure.LintDetectorTest.java
 import com.android.tools.lint.checks.infrastructure.LintDetectorTest.kotlin
 import com.android.tools.lint.checks.infrastructure.TestLintTask.lint
+import com.booknara.lintrules.detector.ISSUE_VIEW_STATE
 import org.junit.Test
 
 class ViewStateDetectorTest {

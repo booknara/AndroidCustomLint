@@ -1,0 +1,18 @@
+// NOTE: This task only checks Java file  style
+apply plugin: 'checkstyle'
+
+task checkStyle(type:Checkstyle) {
+    configFile file(rootDir.path + '/buildsystem/config/check_style.xml')
+    configProperties.checkstyleSuppressionsPath = file(rootDir.path + 'buildsystem/config/check_style_suppression.xml').absolutePath
+    source 'src'
+    include '**/*.java'
+    exclude '**/gen/**'
+    classpath = files()
+
+    showViolations true
+
+    reports {
+        xml.enabled false
+        html.enabled true
+    }
+}

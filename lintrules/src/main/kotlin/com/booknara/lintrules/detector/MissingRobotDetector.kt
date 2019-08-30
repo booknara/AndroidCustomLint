@@ -1,26 +1,25 @@
-package com.booknara.lintrules
+package com.booknara.lintrules.detector
 
 import com.android.tools.lint.detector.api.*
 import org.jetbrains.uast.UClass
 import java.util.*
 
-
-val ISSUE_MISSING_VIEWMODEL_DETECTOR = Issue.create(
-    id = "MissingViewModel",
-    briefDescription = MissingViewModelDetector.MESSAGE,
-    explanation = MissingViewModelDetector.MESSAGE,
+val ISSUE_MISSING_ROBOT_DETECTOR = Issue.create(
+    id = "MissingRobot",
+    briefDescription = MissingRobotDetector.MESSAGE,
+    explanation = MissingRobotDetector.MESSAGE,
     category = Category.CORRECTNESS,
     priority = 5,
     severity = Severity.ERROR,
     implementation = Implementation(
-        MissingViewModelDetector::class.java,
+        MissingRobotDetector::class.java,
         EnumSet.of(Scope.JAVA_FILE)))
 
 
-class MissingViewModelDetector : Detector(), Detector.UastScanner {
+class MissingRobotDetector : Detector(), Detector.UastScanner {
 
     companion object {
-        const val MESSAGE = "ViewModel is missing for this fragment (or has incorrect name or is in wrong package), please create one"
+        const val MESSAGE = "Robot is missing for this fragment (or has incorrect name or is in wrong package), please create one"
         private val UI_CLASSES =  listOf(
             "android.support.v4.app.Fragment",
             "androidx.fragment.app.Fragment")
@@ -30,15 +29,16 @@ class MissingViewModelDetector : Detector(), Detector.UastScanner {
 
     override fun visitClass(context: JavaContext, declaration: UClass) {
 
+        // Ignore in case we're scanning one of the UI classes
         if (context.evaluator.getQualifiedName(declaration) in UI_CLASSES) return
 
         declaration.qualifiedName?.let { qualifiedName ->
             declaration.name?.let { name ->
                 val packageName = qualifiedName.dropLast(name.length + 1)
-                val viewModelName = name.dropLast("Fragment".length) + "ViewModel"
-                if (context.evaluator.findClass("${packageName}.${viewModelName}") == null) {
+                val robotName = name.dropLast("Fragment".length) + "Robot"
+                if (context.evaluator.findClass("${packageName}.${robotName}") == null) {
                     context.report(
-                        ISSUE_MISSING_VIEWMODEL_DETECTOR, declaration,
+                        ISSUE_MISSING_ROBOT_DETECTOR, declaration,
                         context.getNameLocation(declaration),
                         MESSAGE
                     )

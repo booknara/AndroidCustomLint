@@ -2,6 +2,8 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
+apply from: rootProject.rootDir.path + '/buildsystem/tools/verifications.gradle'
+
 android {
     compileSdkVersion rootProject.ext.compileSdkVersionNum
     defaultConfig {
@@ -16,6 +18,20 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        def options = rootProject.ext.lintoptions
+        quiet options.quiet
+        abortOnError options.abortOnError
+        ignoreWarnings options.ignoreWarnings
+        checkAllWarnings options.checkAllWarnings
+        checkReleaseBuilds options.checkReleaseBuilds
+        noLines options.noLines
+        showAll options.showAll
+        lintConfig file(rootDir.path + "/buildsystem/config/lint.xml")
+        htmlReport options.htmlReport
+        xmlReport options.xmlReport
     }
 
     buildTypes {
@@ -40,6 +56,9 @@ dependencies {
 
     def supportDependencies = rootProject.ext.supportDependencies
     implementation supportDependencies.appCompatV7
+
+    def androidxDependencies = rootProject.ext.androidxDependencies
+    implementation androidxDependencies.lifecycle
 
     def androidTestDependencies = rootProject.ext.androidTestDependencies
     testImplementation androidTestDependencies.junit

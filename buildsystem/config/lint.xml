@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Refer to the following pages.
+
+    http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Lint-support
+    http://google.github.io/android-gradle-dsl/current/com.android.build.gradle.internal.dsl.LintOptions.html#com.android.build.gradle.internal.dsl.LintOptions
+-->
+<lint >
+    <issue id="AaptCrash" severity="warning" />
+    <issue id="AccidentalOctal" severity="warning" />
+    <issue id="AdapterViewChildren" severity="warning" />
+    <issue id="AddJavascriptInterface" severity="warning" />
+    <issue id="AllowBackup" severity="warning" />
+    <issue id="AlwaysShowAction" severity="warning" />
+
+    <!--<issue id="AndroidGradlePluginVersion" severity="warning" />-->
+    <!--<issue id="AppIndexingError" severity="warning" />-->
+    <!--<issue id="AppIndexingWarning" severity="warning" />-->
+
+    <issue id="Assert" severity="warning" />
+    <issue id="BackButton" severity="warning" />
+    <issue id="ButtonCase" severity="warning" />
+    <issue id="ButtonOrder" severity="warning" />
+    <issue id="ButtonStyle" severity="warning" />
+    <issue id="ByteOrderMark" severity="warning" />
+    <issue id="ClickableViewAccessibility" severity="warning" />
+    <issue id="CommitPrefEdits" severity="warning" />
+    <issue id="ContentDescription" severity="ignore" />
+    <issue id="CustomViewStyleable" severity="warning" />
+    <issue id="CutPasteId" severity="warning" />
+    <issue id="DalvikOverride" severity="warning" />
+    <issue id="DefaultLocale" severity="warning" />
+    <issue id="DeviceAdmin" severity="warning" />
+    <issue id="DisableBaselineAlignment" severity="warning" />
+    <issue id="DuplicateUsesFeature" severity="warning" />
+    <issue id="EasterEgg" severity="warning" />
+    <issue id="EnforceUTF8" severity="warning" />
+    <issue id="ExportedContentProvider" severity="warning" />
+    <issue id="ExportedPreferenceActivity" severity="warning" />
+    <issue id="ExportedReceiver" severity="warning" />
+    <issue id="ExportedService" severity="warning" />
+    <issue id="ExtraText" severity="warning" />
+    <issue id="FieldGetter" severity="warning" />
+    <issue id="FullBackupContent" severity="warning" />
+    <issue id="GifUsage" severity="warning" />
+    <issue id="GradleCompatible" severity="warning" />
+    <issue id="GradleDependency" severity="warning" />
+    <issue id="GradleDeprecated" severity="warning" />
+    <issue id="GradleDynamicVersion" severity="warning" />
+    <issue id="GradleGetter" severity="warning" />
+    <issue id="GradleIdeError" severity="warning" />
+    <issue id="GradleOverrides" severity="warning" />
+    <issue id="GradlePath" severity="warning" />
+    <issue id="GridLayout" severity="warning" />
+    <issue id="IconColors" severity="warning" />
+    <issue id="IconDensities" severity="warning" />
+    <issue id="IconDipSize" severity="warning" />
+    <issue id="IconDuplicatesConfig" severity="warning" />
+    <issue id="IconExpectedSize" severity="warning" />
+    <issue id="IconLauncherShape" severity="warning" />
+    <issue id="IconLocation" severity="warning" />
+    <issue id="IconMissingDensityFolder" severity="ignore" />
+    <issue id="IconNoDpi" severity="warning" />
+    <issue id="IconXmlAndPng" severity="warning" />
+    <issue id="IllegalResourceRef" severity="warning" />
+    <issue id="ImpliedQuantity" severity="warning" />
+    <issue id="IncludeLayoutParam" severity="warning" />
+    <issue id="InconsistentArrays" severity="warning" />
+    <issue id="InconsistentLayout" severity="warning" />
+    <issue id="InflateParams" severity="warning" />
+    <issue id="InlinedApi" severity="warning" />
+    <issue id="InnerclassSeparator" severity="warning" />
+    <issue id="InOrMmUsage" severity="warning" />
+    <issue id="Instantiatable" severity="warning" />
+    <issue id="InvalidId" severity="warning" />
+    <issue id="InvalidPackage" severity="warning" />
+    <issue id="InvalidResourceFolder" severity="warning" />
+    <issue id="JavascriptInterface" severity="warning" />
+    <issue id="LabelFor" severity="warning" />
+    <issue id="LibraryCustomView" severity="warning" />
+    <issue id="LocaleFolder" severity="warning" />
+    <issue id="LocalSuppress" severity="warning" />
+    <issue id="LogConditional" severity="warning" />
+    <issue id="LogTagMismatch" severity="warning" />
+    <issue id="ManifestOrder" severity="warning" />
+    <issue id="MenuTitle" severity="warning" />
+    <issue id="MipmapIcons" severity="warning" />
+    <issue id="MissingApplicationIcon" severity="warning" />
+    <issue id="MissingId" severity="warning" />
+    <issue id="MissingPermission" severity="warning" />
+    <issue id="MissingPrefix" severity="warning" />
+    <issue id="MissingQuantity" severity="warning" />
+    <issue id="MissingTranslation" severity="warning" />
+    <issue id="MissingVersion" severity="warning" />
+    <issue id="MockLocation" severity="warning" />
+    <issue id="MultipleUsesSdk" severity="warning" />
+    <issue id="NamespaceTypo" severity="warning" />
+    <issue id="NestedScrolling" severity="warning" />
+    <issue id="NewerVersionAvailable" severity="warning" />
+    <issue id="NfcTechWhitespace" severity="warning" />
+    <issue id="NotSibling" severity="warning" />
+    <issue id="ObsoleteLayoutParam" severity="warning" />
+    <issue id="OldTargetApi" severity="warning" />
+    <issue id="OverrideAbstract" severity="warning" />
+    <issue id="ParcelCreator" severity="warning" />
+    <issue id="PluralsCandidate" severity="ignore" />
+    <issue id="PrivateResource" severity="warning" />
+    <issue id="ProguardSplit" severity="warning" />
+    <issue id="PropertyEscape" severity="warning" />
+    <issue id="ProtectedPermissions" severity="warning" />
+    <issue id="PxUsage" severity="ignore" />
+    <issue id="Range" severity="warning" />
+    <issue id="RelativeOverlap" severity="warning" />
+    <issue id="ResourceAsColor" severity="warning" />
+    <issue id="ResourceName" severity="warning" />
+    <issue id="ScrollViewSize" severity="warning" />
+    <issue id="SelectableText" severity="ignore" />
+    <issue id="ServiceCast" severity="warning" />
+    <issue id="SetJavaScriptEnabled" severity="warning" />
+    <issue id="ShortAlarm" severity="warning" />
+    <issue id="SignatureOrSystemPermissions" severity="warning" />
+    <issue id="SmallSp" severity="warning" />
+    <issue id="SpUsage" severity="ignore" />
+    <issue id="SQLiteString" severity="warning" />
+    <issue id="StopShip" severity="warning" />
+    <issue id="StringShouldBeInt" severity="warning" />
+    <issue id="TextFields" severity="ignore" />
+    <issue id="TrulyRandom" severity="warning" />
+    <issue id="TypographyDashes" severity="warning" />
+    <issue id="TypographyEllipsis" severity="ignore" />
+    <issue id="TypographyFractions" severity="warning" />
+    <issue id="TypographyOther" severity="warning" />
+    <issue id="TypographyQuotes" severity="warning" />
+    <issue id="Typos" severity="warning" />
+    <issue id="UnlocalizedSms" severity="warning" />
+    <issue id="UnusedQuantity" severity="warning" />
+    <issue id="UsesMinSdkAttributes" severity="warning" />
+    <issue id="UsingHttp" severity="warning" />
+    <issue id="ViewConstructor" severity="warning" />
+    <issue id="WrongConstant" severity="warning" />
+    <issue id="WrongRegion" severity="warning" />
+
+    <!-- Newly added warning issues -->
+    <issue id="AppCompatResource" severity="warning" />
+    <issue id="AppCompatCustomView" severity="warning" />
+    <issue id="AppLinkUrlError" severity="warning" />
+    <issue id="DuplicateIds" severity="warning" />
+    <issue id="EllipsizeMaxLines" severity="warning" />
+    <issue id="ExtraTranslation" severity="warning" />
+    <issue id="InvalidWakeLockTag" severity="warning" />
+    <issue id="LintError" severity="warning" />
+    <issue id="MangledCRLF" severity="warning" />
+    <issue id="MissingDefaultResource" severity="warning" />
+    <issue id="MissingRegistered" severity="warning" />
+    <issue id="NewApi" severity="warning" />
+    <issue id="OnClick" severity="warning" />
+    <issue id="PermissionImpliesUnsupportedChromeOsHardware" severity="warning" />
+    <issue id="ResourceType" severity="warning" />
+    <issue id="RestrictedApi" severity="warning" />
+    <issue id="StringFormatInvalid" severity="warning" />
+    <issue id="StringFormatMatches" severity="warning" />
+    <issue id="SyntheticAccessor" severity="ignore" />
+    <issue id="UnknownId" severity="warning" />
+    <issue id="ValidFragment" severity="warning" />
+    <issue id="WrongViewCast" severity="warning" />
+
+    <!-- Custom lint issues -->
+    <issue id="MissingBaseClass" severity="error" />
+
+</lint >
