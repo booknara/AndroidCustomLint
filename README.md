@@ -1,4 +1,4 @@
-# AndroidCustomLint
+# Android Custom Lint
 This example explains a couple of tools about CheckStyle, Lint, PMD, FindBugs, CPD including Custom Lint for Android.
 
 ## Structure
@@ -8,6 +8,10 @@ This example explains a couple of tools about CheckStyle, Lint, PMD, FindBugs, C
     - **dependencies.gradle** : dependency version definition
     - **config** : static analysis configs
     - **tools** : static analysis gradle tasks
+
+## Custom lint implementation
+- MissingBaseClass (Done)
+- MisplaceId (TODO)
 
 ## References
 - [Write Custom Line Rules](http://tools.android.com/tips/lint-custom-rules) from Android Tool team
