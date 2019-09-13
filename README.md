@@ -1,5 +1,5 @@
 # Android Custom Lint
-This example explains a couple of tools about CheckStyle, Lint, PMD, FindBugs, CPD including Custom Lint for Android.
+This example explains a couple of tools about CheckStyle, Lint, PMD, FindBugs, SpotBugs, Detekt, CPD including Custom Lint for Android.
 
 ## Structure
 - **app** module : the sample example that imports lintrules module
@@ -7,10 +7,11 @@ This example explains a couple of tools about CheckStyle, Lint, PMD, FindBugs, C
 - **buildsystem** folder
     - **dependencies.gradle** : dependency version definition
     - **config** : static analysis configs
-    - **tools** : static analysis gradle tasks
+    - **tools** : static analysis gradle tasks (checkstyle, detekt, findbugs, pmd, spotbugs)
 
 ## Custom lint implementation
 - MissingBaseClass (Done)
+- InvalidAnnotationImport (Done)
 - MisplaceId (TODO)
 
 ## References
