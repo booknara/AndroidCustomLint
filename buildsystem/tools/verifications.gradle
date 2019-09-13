@@ -1,12 +1,14 @@
 apply from: rootProject.rootDir.path + '/buildsystem/tools/checkstyle.gradle'
 apply from: rootProject.rootDir.path + '/buildsystem/tools/pmd.gradle'
+apply from: rootProject.rootDir.path + '/buildsystem/tools/detekt.gradle'
 
+println("gradle version : " + project.gradle.gradleVersion)
 if (Float.valueOf(project.gradle.gradleVersion) < 5.1) {
     apply from: rootProject.rootDir.path + '/buildsystem/tools/findbugs.gradle'
-    check.dependsOn 'checkStyle', 'lint', 'pmd', 'findBugs'
+    check.dependsOn 'checkStyle', 'lint', 'pmd', 'findBugs', 'detektCheck'
 } else {
     apply from: rootProject.rootDir.path + '/buildsystem/tools/spotbugs.gradle'
-    check.dependsOn 'checkStyle', 'lint', 'pmd', 'spotbugsMain'
+    check.dependsOn 'checkStyle', 'lint', 'pmd', 'spotbugsMain', 'detektCheck'
 }
 
 

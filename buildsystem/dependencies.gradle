@@ -10,7 +10,7 @@ ext {
 
     lintoptions = [
             quiet             : false,
-            abortOnError      : true,
+            abortOnError      : false,
             ignoreWarnings    : false,
             checkAllWarnings  : true,
             checkReleaseBuilds: false,
