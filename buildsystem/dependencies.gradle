@@ -1,8 +1,8 @@
 ext {
     // Sdk & buildTools Version Number
     minSdkVersionNum = 21
-    compileSdkVersionNum = 28
-    targetSdkVersionNum = 28
+    compileSdkVersionNum = 29
+    targetSdkVersionNum = 29
 
     // Version code and name
     versionCode = 1
@@ -24,7 +24,7 @@ ext {
     supportVersion = '1.0.0'
 
     // Android Jetpack
-    lifeCycle = '2.0.0'
+    lifeCycleVersion = '2.1.0'
 
     // AndroidTest Library
     jUnitVersion = '4.12'
@@ -52,7 +52,8 @@ ext {
 
     // Dependencies for Android Jetpack library
     androidxDependencies = [
-            lifecycle : "androidx.lifecycle:lifecycle-extensions:${lifeCycle}"
+            lifecycle : "androidx.lifecycle:lifecycle-extensions:${lifeCycleVersion}",
+            viewModel : "androidx.lifecycle:lifecycle-viewmodel:${lifeCycleVersion}"
     ]
 
     // Dependencies for Android test library
@@ -70,7 +71,7 @@ ext {
     // Dependencies for Kotlin
     kotlinDependencies = [
             coreKtx     : "androidx.core:core-ktx:${coreKtxVersion}",
-            stdlib : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlinVersion}"
+            stdlib      : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlinVersion}"
     ]
 
     // Dependencies for Kotlin

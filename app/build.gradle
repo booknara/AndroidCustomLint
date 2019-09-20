@@ -32,6 +32,8 @@ android {
         lintConfig file(rootDir.path + "/buildsystem/config/lint.xml")
         htmlReport options.htmlReport
         xmlReport options.xmlReport
+        htmlOutput file("$project.buildDir/reports/lint/lint-results.html")
+        xmlOutput file("$project.buildDir/reports/lint/lint-results.xml")
     }
 
     buildTypes {
@@ -59,6 +61,7 @@ dependencies {
 
     def androidxDependencies = rootProject.ext.androidxDependencies
     implementation androidxDependencies.lifecycle
+    implementation androidxDependencies.viewModel
 
     def androidTestDependencies = rootProject.ext.androidTestDependencies
     testImplementation androidTestDependencies.junit

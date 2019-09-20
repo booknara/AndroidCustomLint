@@ -3,12 +3,18 @@ apply from: rootProject.rootDir.path + '/buildsystem/tools/pmd.gradle'
 apply from: rootProject.rootDir.path + '/buildsystem/tools/detekt.gradle'
 
 println("gradle version : " + project.gradle.gradleVersion)
-if (Float.valueOf(project.gradle.gradleVersion) < 5.1) {
-    apply from: rootProject.rootDir.path + '/buildsystem/tools/findbugs.gradle'
-    check.dependsOn 'checkStyle', 'lint', 'pmd', 'findBugs', 'detektCheck'
-} else {
-    apply from: rootProject.rootDir.path + '/buildsystem/tools/spotbugs.gradle'
-    check.dependsOn 'checkStyle', 'lint', 'pmd', 'spotbugsMain', 'detektCheck'
-}
+check.dependsOn 'checkStyle', 'lint', 'pmd', 'detekt'
+//TODO : spotbugs issue(compileJava task)
+//apply from: rootProject.rootDir.path + '/buildsystem/tools/spotbugs.gradle'
+// check.dependsOn 'checkStyle', 'lint', 'pmd', 'spotbugsMain', 'detekt'
+
+// Comment out because multiple point for floating number(TODO: version comparision needed)
+//if (Version.parse(project.gradle.gradleVersion) < Version.parse('5.1')) {
+//    apply from: rootProject.rootDir.path + '/buildsystem/tools/findbugs.gradle'
+//    check.dependsOn 'checkStyle', 'lint', 'pmd', 'findBugs', 'detekt'
+//} else {
+//    apply from: rootProject.rootDir.path + '/buildsystem/tools/spotbugs.gradle'
+//    check.dependsOn 'checkStyle', 'lint', 'pmd', 'spotbugsMain', 'detektCheck'
+//}
 
 
