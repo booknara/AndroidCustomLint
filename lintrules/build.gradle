@@ -9,6 +9,7 @@ dependencies {
 
     def lintDependencies = rootProject.ext.lintDependencies
     compileOnly lintDependencies.lintApi
+    compileOnly lintDependencies.checks
     testImplementation lintDependencies.lint
     testImplementation lintDependencies.lintTest
     testImplementation lintDependencies.testUtils

@@ -12,6 +12,7 @@ This example explains a couple of tools about CheckStyle, Lint, PMD, FindBugs, S
 ## Custom lint implementation
 - MissingBaseClass (Done)
 - InvalidAnnotationImport (Done)
+- BigSizedBitmapUsed (Done)
 - MisplaceId (TODO)
 
 ## References

@@ -78,6 +78,7 @@ ext {
     lintDependencies = [
             lintApi     : "com.android.tools.lint:lint-api:${lintVerion}",
             lint        : "com.android.tools.lint:lint:${lintVerion}",
+            checks      : "com.android.tools.lint:lint-checks:${lintVerion}",
             lintTest    : "com.android.tools.lint:lint-tests:${lintVerion}",
             testUtils   : "com.android.tools:testutils:${lintVerion}"
 
