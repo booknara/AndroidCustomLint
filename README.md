@@ -20,7 +20,7 @@ This example explains a couple of tools about CheckStyle, Lint, PMD, FindBugs, S
 - [Building Custom Lint Checks in Android](https://www.bignerdranch.com/blog/building-custom-lint-checks-in-android/) by Matt Compton
 
 ## License
-    Copyright 2019 Daehee Han
+    Copyright 2020 Daehee Han
     
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
